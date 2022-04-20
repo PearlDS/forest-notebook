@@ -32,7 +32,7 @@ public class Omnivore extends Animal {
         this.maxFoodSize = maxFoodSize;
     }
 
-    public void addPlantToDiet(Plant){
+    public void addPlantToDiet(Plant plant){
         // add plant to plantDiet list
     }
 

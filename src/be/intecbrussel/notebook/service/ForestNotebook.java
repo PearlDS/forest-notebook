@@ -4,6 +4,8 @@ import be.intecbrussel.notebook.entities.animal_entities.Carnivore;
 import be.intecbrussel.notebook.entities.animal_entities.Herbivore;
 import be.intecbrussel.notebook.entities.animal_entities.Omnivore;
 import be.intecbrussel.notebook.entities.plant_entities.Plant;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class ForestNotebook {
@@ -13,8 +15,8 @@ public class ForestNotebook {
     private List<Herbivore> herbivores;
     private int plantCount;
     private int animalCount;
-    private List<Animal> animals;
-    private List<Plant> plants;
+    private List<Animal> animals = new ArrayList<>();
+    private List<Plant> plants = new ArrayList<>();
 
 
     public List<Carnivore> getCarnivores() {
@@ -42,19 +44,19 @@ public class ForestNotebook {
     }
 
     public int getPlantCount() {
-        return plantCount;
+        return plants.size();
     }
 
     public int getAnimalCount() {
-        return animalCount;
+        return animals.size();
     }
 
-    public void addAnimal(Animal){
+    public void addAnimal(Animal animal){
         // add Animal to animal list
     }
 
-    public void addPlant(Plant){
-        // add Plant to plant list
+    public void addPlant(Plant plant){
+        plants.add(plant);
     }
 
     public void printNotebook(){
