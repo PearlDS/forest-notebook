@@ -133,8 +133,9 @@ public class NatureApp {
         System.out.println("------------------------");
         System.out.println("List of omnivores added to your notebook");
         System.out.println(forestGuardNotebook.getOmnivores());
+        System.out.println("-------------------------");
 
-
+        System.out.println();
         System.out.println("You have added " + forestGuardNotebook.getPlantCount() + " plants to your notebook");
         System.out.println("You have added " + forestGuardNotebook.getAnimalCount() + " animals to your notebook");
 
