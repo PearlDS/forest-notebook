@@ -1,4 +1,5 @@
 package be.intecbrussel.notebook.service;
+import be.intecbrussel.notebook.comparators.PlantNameSorter;
 import be.intecbrussel.notebook.entities.animal_entities.Animal;
 import be.intecbrussel.notebook.entities.animal_entities.Carnivore;
 import be.intecbrussel.notebook.entities.animal_entities.Herbivore;
@@ -6,6 +7,7 @@ import be.intecbrussel.notebook.entities.animal_entities.Omnivore;
 import be.intecbrussel.notebook.entities.plant_entities.Plant;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ForestNotebook {
@@ -74,7 +76,7 @@ public class ForestNotebook {
     }
 
     public void sortPlantsByName(){
-        // sort the plant list by name
+        plants.sort(new PlantNameSorter());
     }
 
 }

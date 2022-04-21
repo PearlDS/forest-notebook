@@ -1,4 +1,5 @@
 package be.intecbrussel.notebook.app;
+import be.intecbrussel.notebook.entities.animal_entities.Animal;
 import be.intecbrussel.notebook.entities.animal_entities.Herbivore;
 import be.intecbrussel.notebook.entities.animal_entities.Omnivore;
 import be.intecbrussel.notebook.entities.plant_entities.*;
@@ -66,6 +67,9 @@ public class NatureApp {
 
 
 
+       forestGuardNotebook.printNotebook();
+       System.out.println("---------------");
+       forestGuardNotebook.sortPlantsByName();
        forestGuardNotebook.printNotebook();
        System.out.println("---------------");
 

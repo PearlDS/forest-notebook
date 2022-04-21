@@ -1,6 +1,5 @@
 package be.intecbrussel.notebook.entities.animal_entities;
 import be.intecbrussel.notebook.entities.plant_entities.Plant;
-
 import java.util.HashSet;
 import java.util.Set;
 
