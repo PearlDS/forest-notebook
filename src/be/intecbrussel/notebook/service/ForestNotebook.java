@@ -8,9 +8,7 @@ import be.intecbrussel.notebook.entities.animal_entities.Carnivore;
 import be.intecbrussel.notebook.entities.animal_entities.Herbivore;
 import be.intecbrussel.notebook.entities.animal_entities.Omnivore;
 import be.intecbrussel.notebook.entities.plant_entities.Plant;
-
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class ForestNotebook {
