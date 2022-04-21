@@ -33,7 +33,7 @@ public class Omnivore extends Animal {
     }
 
     public void addPlantToDiet(Plant plant){
-        // add plant to plantDiet list
+        plantDiet.add(plant);
     }
 
     @Override

@@ -36,7 +36,7 @@ public class Herbivore extends Animal {
 
     @Override
     public String toString() {
-        return "Herbivore{" +
+        return getName() + " Herbivore{" +
                 "plantDiet=" + plantDiet +
                 '}';
     }

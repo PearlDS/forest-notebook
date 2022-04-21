@@ -52,7 +52,7 @@ public class ForestNotebook {
     }
 
     public void addAnimal(Animal animal){
-        // add Animal to animal list
+        animals.add(animal);
     }
 
     public void addPlant(Plant plant){
@@ -60,7 +60,13 @@ public class ForestNotebook {
     }
 
     public void printNotebook(){
-        //prints the notebook
+        for (Plant plant : plants ){
+            System.out.println(plant);
+        }
+
+        for (Animal animal : animals){
+            System.out.println(animals);
+        }
     }
 
     public void sortAnimalsByName(){

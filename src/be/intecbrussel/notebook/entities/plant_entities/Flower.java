@@ -23,7 +23,7 @@ public class Flower extends Plant {
 
     @Override
     public String toString() {
-        return "Flower{" +
+        return getName() + " Flower{" +
                 "smell=" + smell +
                 '}';
     }
