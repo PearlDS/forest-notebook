@@ -1,10 +1,10 @@
 package be.intecbrussel.notebook.app;
 import be.intecbrussel.notebook.entities.animal_entities.Animal;
+import be.intecbrussel.notebook.entities.animal_entities.Carnivore;
 import be.intecbrussel.notebook.entities.animal_entities.Herbivore;
 import be.intecbrussel.notebook.entities.animal_entities.Omnivore;
 import be.intecbrussel.notebook.entities.plant_entities.*;
 import be.intecbrussel.notebook.service.ForestNotebook;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -52,28 +52,48 @@ public class NatureApp {
 
 
 
-       Herbivore bunny = new Herbivore("Bunny",1.5,0.5,0.7);
-       Set<Plant> bunnyDiet = new HashSet<>();
-       bunny.setPlantDiet(bunnyDiet);
-       bunny.addPlantToDiet(rose);
-       bunny.addPlantToDiet(snowcap);
-       bunny.addPlantToDiet(chickweed);
-       bunny.addPlantToDiet(goosegrass);
-       forestGuardNotebook.addAnimal(bunny);
+        Herbivore bunny = new Herbivore("Bunny",1.5,0.5,0.7);
+        Set<Plant> bunnyDiet = new HashSet<>();
+        bunny.setPlantDiet(bunnyDiet);
+        bunny.addPlantToDiet(rose);
+        bunny.addPlantToDiet(snowcap);
+        bunny.addPlantToDiet(chickweed);
+        bunny.addPlantToDiet(goosegrass);
+        forestGuardNotebook.addAnimal(bunny);
 
-       Omnivore pig = new Omnivore("Pig", 136,80,90);
-       Set<Plant> pigDiet = new HashSet<>();
-       pig.setPlantDiet(pigDiet);
+        Omnivore pig = new Omnivore("Pig", 136,80,90);
+        Set<Plant> pigDiet = new HashSet<>();
+        pig.setPlantDiet(pigDiet);
+        pig.addPlantToDiet(chickweed);
+        pig.addPlantToDiet(goosegrass);
+        pig.setMaxFoodSize(0.90);
+        forestGuardNotebook.addAnimal(pig);
+
+        Carnivore lion = new Carnivore("Lion",2,2,2);
+        lion.setMaxFoodSize(1.30);
+        forestGuardNotebook.addAnimal(lion);
+
+        Carnivore cat = new Carnivore("Cat",2,0.5,2);
+        cat.setMaxFoodSize(2);
+        forestGuardNotebook.addAnimal(cat);
 
 
+        System.out.println("Notebook list before sorting: ");
+        forestGuardNotebook.printNotebook();
+        System.out.println("-----------------------");
+        System.out.println("Notebooklist after sorting by name: ");
+        forestGuardNotebook.sortPlantsByName();
+        forestGuardNotebook.sortAnimalsByName();
+        forestGuardNotebook.printNotebook();
+        System.out.println("-----------------------");
+        System.out.println("Notebooklist after sorting by height: ");
+        forestGuardNotebook.sortPlantsByHeight();
+        forestGuardNotebook.sortAnimalsByHeight();
+        forestGuardNotebook.printNotebook();
+        System.out.println("-----------------------");
 
-       forestGuardNotebook.printNotebook();
-       System.out.println("---------------");
-       forestGuardNotebook.sortPlantsByName();
-       forestGuardNotebook.printNotebook();
-       System.out.println("---------------");
 
-
+        System.out.println();
 
 
         System.out.println("You have added " + forestGuardNotebook.getPlantCount() + " plants to your notebook");

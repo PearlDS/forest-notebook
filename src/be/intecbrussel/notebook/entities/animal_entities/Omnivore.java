@@ -38,7 +38,7 @@ public class Omnivore extends Animal {
 
     @Override
     public String toString() {
-        return "Omnivore{" +
+        return getName() + " Omnivore{" +
                 "plantDiet=" + plantDiet +
                 ", maxFoodSize=" + maxFoodSize +
                 '}';

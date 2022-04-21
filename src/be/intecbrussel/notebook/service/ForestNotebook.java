@@ -1,4 +1,7 @@
 package be.intecbrussel.notebook.service;
+import be.intecbrussel.notebook.comparators.AnimalHeightSorter;
+import be.intecbrussel.notebook.comparators.AnimalNameSorter;
+import be.intecbrussel.notebook.comparators.PlantHeightSorter;
 import be.intecbrussel.notebook.comparators.PlantNameSorter;
 import be.intecbrussel.notebook.entities.animal_entities.Animal;
 import be.intecbrussel.notebook.entities.animal_entities.Carnivore;
@@ -67,16 +70,24 @@ public class ForestNotebook {
         }
 
         for (Animal animal : animals){
-            System.out.println(animals);
+            System.out.println(animal);
         }
     }
 
     public void sortAnimalsByName(){
-        // sort the animal list by name
+        animals.sort(new AnimalNameSorter());
     }
 
     public void sortPlantsByName(){
         plants.sort(new PlantNameSorter());
+    }
+
+    public void sortAnimalsByHeight(){
+        animals.sort(new AnimalHeightSorter());
+    }
+
+    public void sortPlantsByHeight(){
+        plants.sort(new PlantHeightSorter());
     }
 
 }
