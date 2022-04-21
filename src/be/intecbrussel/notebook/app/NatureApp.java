@@ -1,5 +1,4 @@
 package be.intecbrussel.notebook.app;
-import be.intecbrussel.notebook.entities.animal_entities.Animal;
 import be.intecbrussel.notebook.entities.animal_entities.Carnivore;
 import be.intecbrussel.notebook.entities.animal_entities.Herbivore;
 import be.intecbrussel.notebook.entities.animal_entities.Omnivore;
@@ -61,6 +60,14 @@ public class NatureApp {
         bunny.addPlantToDiet(goosegrass);
         forestGuardNotebook.addAnimal(bunny);
 
+        Herbivore deer = new Herbivore("Deer",20,1.3,1);
+        Set<Plant> deerDiet = new HashSet<>();
+        deer.setPlantDiet(deerDiet);
+        deer.addPlantToDiet(snowcap);
+        deer.addPlantToDiet(oak);
+        deer.addPlantToDiet(goosegrass);
+        forestGuardNotebook.addAnimal(deer);
+
         Omnivore pig = new Omnivore("Pig", 136,80,90);
         Set<Plant> pigDiet = new HashSet<>();
         pig.setPlantDiet(pigDiet);
@@ -69,6 +76,22 @@ public class NatureApp {
         pig.setMaxFoodSize(0.90);
         forestGuardNotebook.addAnimal(pig);
 
+        Omnivore bear = new Omnivore("Bear",200,150,70);
+        Set<Plant> bearDiet = new HashSet<>();
+        bear.setPlantDiet(bearDiet);
+        bear.addPlantToDiet(goosegrass);
+        bear.addPlantToDiet(japaneseLaurel);
+        bear.setMaxFoodSize(20);
+        forestGuardNotebook.addAnimal(bear);
+
+        Omnivore boar = new Omnivore("Boar",50,1.3,90);
+        Set<Plant> boarDiet = new HashSet<>();
+        boar.setPlantDiet(boarDiet);
+        boar.addPlantToDiet(japaneseLaurel);
+        boar.setMaxFoodSize(0.50);
+        forestGuardNotebook.addAnimal(boar);
+
+
         Carnivore lion = new Carnivore("Lion",2,2,2);
         lion.setMaxFoodSize(1.30);
         forestGuardNotebook.addAnimal(lion);
@@ -76,6 +99,14 @@ public class NatureApp {
         Carnivore cat = new Carnivore("Cat",2,0.5,2);
         cat.setMaxFoodSize(2);
         forestGuardNotebook.addAnimal(cat);
+
+        Carnivore panther = new Carnivore("Panther",20,2,1.9);
+        panther.setMaxFoodSize(1.30);
+        forestGuardNotebook.addAnimal(panther);
+
+        Carnivore tiger = new Carnivore("Tiger",60,2.5,4);
+        tiger.setMaxFoodSize(4);
+        forestGuardNotebook.addAnimal(tiger);
 
 
         System.out.println("Notebook list before sorting: ");
@@ -94,6 +125,14 @@ public class NatureApp {
 
 
         System.out.println();
+        System.out.println("List of carnivores added to your notebook");
+        System.out.println(forestGuardNotebook.getCarnivores());
+        System.out.println("----------------------");
+        System.out.println("List of herbivores added to your notebook");
+        System.out.println(forestGuardNotebook.getHerbivores());
+        System.out.println("------------------------");
+        System.out.println("List of omnivores added to your notebook");
+        System.out.println(forestGuardNotebook.getOmnivores());
 
 
         System.out.println("You have added " + forestGuardNotebook.getPlantCount() + " plants to your notebook");

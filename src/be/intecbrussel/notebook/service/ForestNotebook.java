@@ -15,9 +15,9 @@ import java.util.List;
 
 public class ForestNotebook {
 
-    private List<Carnivore> carnivores;
-    private List<Omnivore> omnivores;
-    private List<Herbivore> herbivores;
+    private List<Carnivore> carnivores = new ArrayList<>();
+    private List<Omnivore> omnivores = new ArrayList<>();
+    private List<Herbivore> herbivores = new ArrayList<>();
     private int plantCount;
     private int animalCount;
     private List<Animal> animals = new ArrayList<>();
@@ -58,6 +58,14 @@ public class ForestNotebook {
 
     public void addAnimal(Animal animal){
         animals.add(animal);
+        if(animal instanceof Carnivore){
+            carnivores.add((Carnivore) animal);
+        } else if (animal instanceof Omnivore) {
+            omnivores.add((Omnivore) animal);
+        } else {
+            herbivores.add((Herbivore) animal);
+        }
+
     }
 
     public void addPlant(Plant plant){
